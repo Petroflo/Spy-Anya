@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sprites/TX Tileset Grass.png" type="Texture" id=1]
 [ext_resource path="res://scene/spy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scene/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/kindpng_4005131.png" type="Texture" id=4]
 
 [sub_resource type="TileSet" id=1]
 0/name = "TX Tileset Grass.png 0"
@@ -13,6 +14,10 @@
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
 1/name = "TX Tileset Grass.png 1"
@@ -23,6 +28,10 @@
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
 2/name = "TX Tileset Grass.png 2"
@@ -33,6 +42,10 @@
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
 2/shapes = [  ]
 2/z_index = 0
 3/name = "TX Tileset Grass.png 3"
@@ -43,6 +56,10 @@
 3/tile_mode = 0
 3/occluder_offset = Vector2( 0, 0 )
 3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
 3/shapes = [  ]
 3/z_index = 0
 
@@ -63,3 +80,7 @@ position = Vector2( -238.311, -197.16 )
 [node name="player" parent="TileMap" instance=ExtResource( 3 )]
 position = Vector2( -45.631, -19.195 )
 
+[node name="sprite_question_mark" type="Sprite" parent="TileMap/player"]
+position = Vector2( 566.006, 130.028 )
+scale = Vector2( 0.113724, 0.0886303 )
+texture = ExtResource( 4 )

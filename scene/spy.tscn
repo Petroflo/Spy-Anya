@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://spy.gd" type="Script" id=1]
+[ext_resource path="res://scripte/spy.gd" type="Script" id=1]
 [ext_resource path="res://sprites/kindpng_4468982.png" type="Texture" id=2]
 [ext_resource path="res://sprites/kindpng_4005131.png" type="Texture" id=3]
 
@@ -32,4 +32,3 @@ texture = ExtResource( 3 )
 [node name="spy_hit" type="CollisionShape2D" parent="."]
 position = Vector2( 576.743, 253.418 )
 shape = SubResource( 2 )
-
