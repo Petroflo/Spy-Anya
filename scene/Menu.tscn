@@ -1,0 +1,55 @@
+[gd_scene format=2]
+
+[node name="Menu" type="Control"]
+anchor_left = 0.502
+anchor_top = 0.5
+anchor_right = 0.502
+anchor_bottom = 0.5
+margin_left = -512.048
+margin_top = -297.0
+margin_right = 511.952
+margin_bottom = 303.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -279.0
+margin_top = -182.0
+margin_right = 280.0
+margin_bottom = 181.0
+alignment = 1
+
+[node name="Start_Button" type="Button" parent="VBoxContainer"]
+margin_top = 135.0
+margin_right = 559.0
+margin_bottom = 155.0
+rect_pivot_offset = Vector2( 2, 0 )
+toggle_mode = true
+action_mode = 0
+text = "Start"
+
+[node name="How_To_Play_Button" type="Button" parent="VBoxContainer"]
+margin_top = 159.0
+margin_right = 559.0
+margin_bottom = 179.0
+toggle_mode = true
+keep_pressed_outside = true
+text = "How To Play"
+
+[node name="Options_Button" type="Button" parent="VBoxContainer"]
+margin_top = 183.0
+margin_right = 559.0
+margin_bottom = 203.0
+toggle_mode = true
+keep_pressed_outside = true
+text = "Options"
+
+[node name="Quit_Button" type="Button" parent="VBoxContainer"]
+margin_top = 207.0
+margin_right = 559.0
+margin_bottom = 227.0
+toggle_mode = true
+keep_pressed_outside = true
+text = "Quit"
