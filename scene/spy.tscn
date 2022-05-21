@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://spy.gd" type="Script" id=1]
+[ext_resource path="res://sprites/kindpng_4468982.png" type="Texture" id=2]
+[ext_resource path="res://sprites/kindpng_4005131.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 181.484
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 46.0211, 57.7985 )
+
+[node name="spy" type="Area2D"]
+position = Vector2( 2.26093, 9.04395 )
+script = ExtResource( 1 )
+
+[node name="zone" type="CollisionShape2D" parent="."]
+position = Vector2( 562.991, 239.667 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 838.688, 481.848 )
+scale = Vector2( 0.773415, 0.699504 )
+texture = ExtResource( 2 )
+offset = Vector2( 48.0237, -3.19016 )
+
+[node name="sprite_question_mark" type="Sprite" parent="."]
+position = Vector2( 566.006, 130.028 )
+scale = Vector2( 0.113724, 0.0886303 )
+texture = ExtResource( 3 )
+
+[node name="spy_hit" type="CollisionShape2D" parent="."]
+position = Vector2( 576.743, 253.418 )
+shape = SubResource( 2 )
+

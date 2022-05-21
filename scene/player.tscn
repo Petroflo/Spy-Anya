@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripte/player.gd" type="Script" id=1]
-[ext_resource path="res://sprites/anya_forger_overworld_sprite_by_darkusshadow_df58sr3.png" type="Texture" id=2]
-[ext_resource path="res://sprites/ray/RpgCharacterShadow.png" type="Texture" id=3]
+[ext_resource path="res://sprites/ray/RpgCharacterShadow.png" type="Texture" id=2]
+[ext_resource path="res://sprites/kindpng_4005131.png" type="Texture" id=3]
+[ext_resource path="res://sprites/anya_forger_overworld_sprite_by_darkusshadow_df58sr3.png" type="Texture" id=4]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "Walk_back"
 length = 0.4
 loop = true
@@ -38,7 +39,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "Walk_left"
 length = 0.4
 loop = true
@@ -55,7 +56,7 @@ tracks/0/keys = {
 "values": [ 4, 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "Walk_right"
 length = 0.4
 loop = true
@@ -72,7 +73,7 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11 ]
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 18, 22.5 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
@@ -83,19 +84,26 @@ script = ExtResource( 1 )
 position = Vector2( 0, 61 )
 rotation = 3.1404
 scale = Vector2( 2.38637, 2.46219 )
+texture = ExtResource( 2 )
+
+[node name="question_mark" type="Sprite" parent="."]
+visible = false
+position = Vector2( -2.7207, -44.8923 )
+scale = Vector2( 0.0365281, 0.0395307 )
 texture = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
-hframes = 4
+texture = ExtResource( 4 )
 vframes = 4
+hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Walk_back = SubResource( 3 )
+anims/Walk_back = SubResource( 1 )
 anims/Walk_down = SubResource( 2 )
-anims/Walk_left = SubResource( 4 )
-anims/Walk_right = SubResource( 5 )
+anims/Walk_left = SubResource( 3 )
+anims/Walk_right = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 8 )
-shape = SubResource( 1 )
+shape = SubResource( 5 )
+

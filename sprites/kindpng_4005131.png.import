@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/03.png-c31d3564790dcfb228ce51cff1c82bdb.stex"
+path="res://.import/kindpng_4005131.png-23d04d6e9cdb096227718a64e0354968.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ray/03.png"
-dest_files=[ "res://.import/03.png-c31d3564790dcfb228ce51cff1c82bdb.stex" ]
+source_file="res://sprites/kindpng_4005131.png"
+dest_files=[ "res://.import/kindpng_4005131.png-23d04d6e9cdb096227718a64e0354968.stex" ]
 
 [params]
 
