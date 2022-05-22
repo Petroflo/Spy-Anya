@@ -9,6 +9,9 @@ func _ready():
 func _process(delta):
 	$sprite_question_mark.visible = active
 
+func _physics_process(delta):
+		$Sprite/AnimationPlayer.play("Move_Down")
+
 func _on_spy_body_entered(body):
 	if body.name == 'player':
 		active = true

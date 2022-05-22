@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://sprites/TX Tileset Grass.png" type="Texture" id=1]
 [ext_resource path="res://sprites/city/previews/outdoors.png" type="Texture" id=2]
@@ -844,6 +844,57 @@ tracks/0/keys = {
 [sub_resource type="CircleShape2D" id=58]
 radius = 65.3713
 
+[sub_resource type="Animation" id=60]
+resource_name = "Move_Right"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8 ]
+}
+
+[sub_resource type="Animation" id=61]
+resource_name = "Move_Up"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="Animation" id=62]
+resource_name = "Move_left"
+length = 0.166667
+loop = true
+step = 0.00833333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 8 ]
+}
+
 [sub_resource type="DynamicFont" id=44]
 size = 20
 outline_size = 1
@@ -945,7 +996,7 @@ position = Vector2( 562, -108 )
 texture = ExtResource( 9 )
 hframes = 4
 vframes = 4
-frame = 5
+frame = 9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC/Area2D2/velvet_girl"]
 anims/Move_Down = SubResource( 12 )
@@ -1019,7 +1070,6 @@ position = Vector2( 214.172, -349.344 )
 texture = ExtResource( 16 )
 hframes = 3
 vframes = 4
-frame = 9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC/Area2D4/grandma"]
 anims/Move_Down = SubResource( 24 )
@@ -1118,9 +1168,12 @@ position = Vector2( -188.328, 61.6215 )
 texture = ExtResource( 24 )
 hframes = 3
 vframes = 4
-frame = 9
+frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC/Area2D8/Spy"]
+anims/Move_Down = SubResource( 60 )
+anims/Move_Left = SubResource( 61 )
+anims/Move_Right = SubResource( 62 )
 
 [node name="sprite_question_mark" type="Sprite" parent="NPC/Area2D8"]
 position = Vector2( -197.156, 8.27734 )

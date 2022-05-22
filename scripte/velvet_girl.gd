@@ -3,7 +3,7 @@ extends Area2D
 var active = false
 
 func _physics_process(delta):
-		$velvet_girl/AnimationPlayer.play("Move_Up")
+		$velvet_girl/AnimationPlayer.play("Move_Down")
 
 func _ready():
 	connect("body_entered", self, '_on_velvet_girl_body_entered')

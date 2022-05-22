@@ -17,8 +17,6 @@ func _physics_process(delta):
 	else:
 		motion.y = 0
 		motion.x = 0
-	
-	
 
 	if Input.is_action_pressed("ui_focus_next"):
 		position.y = pl.pos_y - 100

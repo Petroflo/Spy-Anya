@@ -7,7 +7,7 @@ var state = 0
 #0 for nothing, 1 = right, 2 = left
 
 func _physics_process(delta):
-	$grandma/AnimationPlayer.play("Move_Up")
+	$grandma/AnimationPlayer.play("Move_Right")
 
 func _ready():
 	connect("body_entered", self, '_on_grandma_body_entered')
