@@ -5,7 +5,7 @@
 [ext_resource path="res://sprites/kindpng_4005131.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 181.484
+radius = 96.3328
 
 [sub_resource type="Animation" id=2]
 resource_name = "Move_Down"
@@ -83,7 +83,7 @@ position = Vector2( 2.26093, 9.04395 )
 script = ExtResource( 1 )
 
 [node name="zone" type="CollisionShape2D" parent="."]
-position = Vector2( 562.991, 239.667 )
+position = Vector2( 583.739, 243.956 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

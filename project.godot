@@ -93,7 +93,7 @@ pl="*res://scene/player.tscn"
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
 
 [input]
 
