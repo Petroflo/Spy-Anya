@@ -32,7 +32,7 @@ func read_input():
 		$AnimationPlayer.stop() 
 	pos_y = position.y
 	pos_x = position.x
-	move_and_slide(velocity, Vector2(0, 0), false, 4, 0.785, false)
+	velocity = move_and_slide(velocity, Vector2(0, 0), false, 4, 0.785, false)
 
 func _on_spy_area_entered(area):
 	if area.get_parent().name.begins_with("spy"):
