@@ -1,45 +1,42 @@
 extends KinematicBody2D
 
 var velocity : Vector2 = Vector2()
-var dirrection: Vector2 = Vector2()
+var direction: Vector2 = Vector2()
+var speed = 600
 
-
-var active = false
-
-func _ready():
-	connect("body_entered", self, '_on_spy_body_entered')
-	connect("body_exited", self, '_on_spy_body_exited')
-
-func _process(delta):
-
-	$sprite_question_mark.visible = active
-
-func _on_spy_body_entered(body):
-	if body.name == 'spy':
-		active = true
-
-func _on_spy_body_exited(body):
-	if body.name == 'spy':
-		active = false
 
 func read_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("down") or Input.is_action_pressed("ui_down"):
-		velocity.y += 1
+		velocity.y = speed
 		$AnimationPlayer.play("Walk_down")
 	elif Input.is_action_pressed("up") or Input.is_action_pressed("ui_up"):
-		velocity.y -= 1
+		velocity.y = -speed
 		$AnimationPlayer.play("Walk_back")
 	elif Input.is_action_pressed("left") or Input.is_action_pressed("ui_left"):
-		velocity.x -= 1
+		velocity.x = -speed
 		$AnimationPlayer.play("Walk_left")
 	elif Input.is_action_pressed("right") or Input.is_action_pressed("ui_right"):
-		velocity.x += 1
+		velocity.x = speed
 		$AnimationPlayer.play("Walk_right")
 	else:
+		velocity.x = 0
+		velocity.y = 0
 		$AnimationPlayer.stop() 
 		
-	velocity = velocity.normalized()
-	velocity = move_and_slide(velocity * 200)
+	move_and_slide(velocity, Vector2(0, 0), false, 4, 0.785, false)
+	#for index in get_slide_count():
+	#	var collision = get_slide_collision(index)
+	#	if collision.collider.is_in_group("spy"):
+	# 		print("coucou", collision.collider.name)
+
+func _on_spy_area_entered(area):
+	if area.get_parent().name.begins_with("spy"):
+		print("coucou", area.get_parent().get_name())
+
+func _on_Area2D_area_entered(area):
+	if area.get_parent().name.begins_with("spy"):
+		print("coucou", area.get_parent().get_name())
+
 func _physics_process(delta):
 	read_input()
