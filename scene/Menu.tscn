@@ -35,7 +35,6 @@ margin_top = 159.0
 margin_right = 559.0
 margin_bottom = 179.0
 toggle_mode = true
-keep_pressed_outside = true
 text = "How To Play"
 
 [node name="Options_Button" type="Button" parent="VBoxContainer"]
@@ -43,7 +42,6 @@ margin_top = 183.0
 margin_right = 559.0
 margin_bottom = 203.0
 toggle_mode = true
-keep_pressed_outside = true
 text = "Options"
 
 [node name="Quit_Button" type="Button" parent="VBoxContainer"]
@@ -51,5 +49,5 @@ margin_top = 207.0
 margin_right = 559.0
 margin_bottom = 227.0
 toggle_mode = true
-keep_pressed_outside = true
 text = "Quit"
+

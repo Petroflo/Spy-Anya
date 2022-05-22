@@ -31,7 +31,7 @@ func _physics_process(delta):
 			$Sprite/AnimationPlayer.stop()
 			statue = 2
 		if collision.collider.name.begins_with("spy"):
-			print("lol")
+			$Sprite/AnimationPlayer.stop()
 			statue = 0
 #	print(motion.y)
 #	print(motion.x)

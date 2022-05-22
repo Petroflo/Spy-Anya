@@ -105,6 +105,6 @@ anims/Walk_left = SubResource( 3 )
 anims/Walk_right = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 9 )
+position = Vector2( 0, 6.54453 )
 shape = SubResource( 5 )
 

@@ -3,7 +3,6 @@ extends KinematicBody2D
 const menu = preload("res://scripte/PauseMenu.gd")
 
 var velocity : Vector2 = Vector2()
-var direction: Vector2 = Vector2()
 var speed = 600
 var pos_y
 var pos_x
