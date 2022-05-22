@@ -3,9 +3,10 @@ extends KinematicBody2D
 const menu = preload("res://scripte/PauseMenu.gd")
 
 var velocity : Vector2 = Vector2()
-var speed = 600
+var speed = 100
 var pos_y
 var pos_x
+
 
 func read_input():
 	velocity = Vector2()

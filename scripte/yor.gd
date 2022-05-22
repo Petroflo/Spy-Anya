@@ -22,7 +22,7 @@ func _physics_process(delta):
 
 	if Input.is_action_pressed("ui_select"):
 		position.y = pl.pos_y - 100
-		position.x = pl.pos_x + 500
+		position.x = pl.pos_x + 400
 		statue = 1
 		print(position.y)
 	for index in get_slide_count():
