@@ -1,14 +1,20 @@
 extends KinematicBody2D
 
+const menu = preload("res://scripte/PauseMenu.gd")
+
 var velocity : Vector2 = Vector2()
 var direction: Vector2 = Vector2()
 var speed = 600
 var pos
 
-
 func read_input():
 	velocity = Vector2()
-	if Input.is_action_pressed("down") or Input.is_action_pressed("ui_down"):
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().paused
+		get_tree().change_scene("res://scene/PauseMenu.tscn")
+		#get_parent().add_child(menu.instance())
+		#queue_free()
+	elif Input.is_action_pressed("down") or Input.is_action_pressed("ui_down"):
 		velocity.y = speed
 		$AnimationPlayer.play("Walk_down")
 	elif Input.is_action_pressed("up") or Input.is_action_pressed("ui_up"):
@@ -27,10 +33,6 @@ func read_input():
 	pos = position.y
 	print(pos)
 	move_and_slide(velocity, Vector2(0, 0), false, 4, 0.785, false)
-	#for index in get_slide_count():
-	#	var collision = get_slide_collision(index)
-	#	if collision.collider.is_in_group("spy"):
-	# 		print("coucou", collision.collider.name)
 
 func _on_spy_area_entered(area):
 	if area.get_parent().name.begins_with("spy"):

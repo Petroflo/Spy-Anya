@@ -23,6 +23,10 @@
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
 1/name = "TX Tileset Grass.png 1"
@@ -33,6 +37,10 @@
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
 2/name = "TX Tileset Grass.png 2"
@@ -43,6 +51,10 @@
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
 2/shapes = [  ]
 2/z_index = 0
 3/name = "TX Tileset Grass.png 3"
@@ -53,6 +65,10 @@
 3/tile_mode = 0
 3/occluder_offset = Vector2( 0, 0 )
 3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
 3/shapes = [  ]
 3/z_index = 0
 
@@ -607,7 +623,7 @@ tracks/0/keys = {
 extents = Vector2( 20.427, 26.9736 )
 
 [node name="Node2D" type="Node2D"]
-position = Vector2( 291.381, 193.195 )
+position = Vector2( 290.381, 197.195 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -4.75, 0 )
@@ -627,9 +643,7 @@ smoothing_speed = 6.0
 
 [node name="spy" type="KinematicBody2D" parent="TileMap"]
 
-[node name="spy_zone" parent="TileMap/spy" groups=[
-"spy",
-] instance=ExtResource( 3 )]
+[node name="spy_zone" parent="TileMap/spy" groups=["spy"] instance=ExtResource( 3 )]
 position = Vector2( -238.311, -194.816 )
 
 [node name="spy_hit" type="CollisionShape2D" parent="TileMap/spy"]
@@ -642,8 +656,8 @@ position = Vector2( -50.381, -19.195 )
 [node name="Spy" type="Sprite" parent="NPC"]
 position = Vector2( -86, 107 )
 texture = ExtResource( 4 )
-vframes = 4
 hframes = 3
+vframes = 4
 frame = 9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC/Spy"]
@@ -655,8 +669,8 @@ anims/Move_Up = SubResource( 5 )
 [node name="boy" type="Sprite" parent="NPC"]
 position = Vector2( -71, -102 )
 texture = ExtResource( 5 )
-vframes = 4
 hframes = 3
+vframes = 4
 frame = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC/boy"]
@@ -668,8 +682,8 @@ anims/Move_Up = SubResource( 9 )
 [node name="capitain" type="Sprite" parent="NPC"]
 position = Vector2( 115, 96 )
 texture = ExtResource( 6 )
-vframes = 4
 hframes = 3
+vframes = 4
 frame = 9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC/capitain"]
@@ -681,8 +695,8 @@ anims/Move_Up = SubResource( 13 )
 [node name="chef" type="Sprite" parent="NPC"]
 position = Vector2( 190, -109 )
 texture = ExtResource( 7 )
-vframes = 4
 hframes = 3
+vframes = 4
 frame = 9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC/chef"]
@@ -694,8 +708,8 @@ anims/Move_Up = SubResource( 17 )
 [node name="grandma" type="Sprite" parent="NPC"]
 position = Vector2( 455, -108 )
 texture = ExtResource( 8 )
-vframes = 4
 hframes = 3
+vframes = 4
 frame = 9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC/grandma"]
@@ -707,8 +721,8 @@ anims/Move_Up = SubResource( 21 )
 [node name="velvet_boy" type="Sprite" parent="NPC"]
 position = Vector2( 312, 110 )
 texture = ExtResource( 9 )
-vframes = 4
 hframes = 3
+vframes = 4
 frame = 9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC/velvet_boy"]
@@ -720,8 +734,8 @@ anims/Move_Up = SubResource( 25 )
 [node name="velvet_girl" type="Sprite" parent="NPC"]
 position = Vector2( 562, -108 )
 texture = ExtResource( 10 )
-vframes = 4
 hframes = 4
+vframes = 4
 frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC/velvet_girl"]
