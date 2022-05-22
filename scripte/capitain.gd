@@ -26,7 +26,6 @@ func unpause(timeline_name):
 
 func _on_capitain_body_entered(body):
 	if body.name == 'player':
-
 		active = true
 
 func _on_capitain_body_exited(body):

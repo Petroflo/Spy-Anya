@@ -11,7 +11,7 @@ func _physics_process(delta):
 		motion.y = 0
 		motion.x = -800
 	elif statue == 2:
-		$Sprite/AnimationPlayer.play("Move_Up")
+		$Sprite/AnimationPlayer.play("Move_Left")
 		motion.x = 0
 		motion.y = -100
 	else:
@@ -20,7 +20,7 @@ func _physics_process(delta):
 	
 	
 
-	if Input.is_action_pressed("ui_select"):
+	if Input.is_action_pressed("ui_focus_next"):
 		position.y = pl.pos_y - 100
 		position.x = pl.pos_x + 400
 		statue = 1

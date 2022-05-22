@@ -24,8 +24,6 @@ script = ExtResource( 1 )
 position = Vector2( 526.322, 317.398 )
 texture = ExtResource( 2 )
 
-[node name="Viewport" type="Viewport" parent="."]
-
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 margin_right = 1024.0
@@ -50,8 +48,8 @@ margin_bottom = 103.0
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
 margin_right = 483.0
 margin_bottom = 103.0
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "Anya Spy "
 align = 1
 valign = 1
@@ -78,8 +76,8 @@ margin_bottom = 44.0
 margin_right = 25.0
 margin_bottom = 44.0
 rect_min_size = Vector2( 7, 0 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = ">"
 
 [node name="OptionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
@@ -87,8 +85,8 @@ margin_left = 29.0
 margin_right = 265.0
 margin_bottom = 44.0
 rect_min_size = Vector2( 236, 0 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Start"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
@@ -104,16 +102,16 @@ margin_bottom = 44.0
 margin_right = 25.0
 margin_bottom = 44.0
 rect_min_size = Vector2( 7, 0 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = ">"
 
 [node name="OptionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
 margin_left = 29.0
 margin_right = 265.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "How to Play"
 
 [node name="CenterContainer4" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
@@ -129,8 +127,8 @@ margin_bottom = 44.0
 margin_right = 25.0
 margin_bottom = 44.0
 rect_min_size = Vector2( 7, 0 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = ">"
 
 [node name="OptionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer4/HBoxContainer"]
@@ -138,7 +136,6 @@ margin_left = 29.0
 margin_right = 265.0
 margin_bottom = 44.0
 rect_min_size = Vector2( 236, 0 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Quit"
-

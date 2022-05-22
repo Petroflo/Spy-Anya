@@ -28,10 +28,10 @@ func _input(event):
 func unpause(timeline_name):
 	get_tree().paused = false
 
-func _on_NPC_SPY_body_entered(body):
+func _on_grandma_body_entered(body):
 	if body.name == 'player':
 		active = true
 
-func _on_NPC_SPY_body_exited(body):
+func _on_grandma_body_exited(body):
 	if body.name == 'player':
 		active = false

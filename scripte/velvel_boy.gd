@@ -7,15 +7,7 @@ var state = 0
 #0 for nothing, 1 = right, 2 = left
 
 func _physics_process(delta):
-	state = floor(rand_range(0, 3 )) 
-	print(state)
-	if state == 0:
-		pass
-	elif state == 1:
 		$velvet_boy/AnimationPlayer.play("Move_Right")
-		motion.x = 100
-	elif state == 2:
-		motion.x = -100
 
 func _ready():
 	connect("body_entered", self, '_on_velvel_boy_body_entered')
