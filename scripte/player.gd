@@ -3,6 +3,7 @@ extends KinematicBody2D
 var velocity : Vector2 = Vector2()
 var direction: Vector2 = Vector2()
 var speed = 600
+var pos
 
 
 func read_input():
@@ -23,7 +24,8 @@ func read_input():
 		velocity.x = 0
 		velocity.y = 0
 		$AnimationPlayer.stop() 
-		
+	pos = position.y
+	print(pos)
 	move_and_slide(velocity, Vector2(0, 0), false, 4, 0.785, false)
 	#for index in get_slide_count():
 	#	var collision = get_slide_collision(index)

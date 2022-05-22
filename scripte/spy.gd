@@ -13,7 +13,6 @@ func _on_spy_body_entered(body):
 	if body.name == 'player':
 		active = true
 
-
 func _on_spy_body_exited(body):
 	if body.name == 'player':
 		active = false

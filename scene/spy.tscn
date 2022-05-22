@@ -8,9 +8,11 @@
 radius = 181.484
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 46.0211, 57.7985 )
+extents = Vector2( 21.1857, 24.8901 )
 
-[node name="spy" type="Area2D"]
+[node name="spy" type="Area2D" groups=[
+"groupe_spy",
+]]
 position = Vector2( 2.26093, 9.04395 )
 script = ExtResource( 1 )
 
@@ -25,10 +27,11 @@ texture = ExtResource( 2 )
 offset = Vector2( 48.0237, -3.19016 )
 
 [node name="sprite_question_mark" type="Sprite" parent="."]
-position = Vector2( 566.006, 130.028 )
-scale = Vector2( 0.113724, 0.0886303 )
+position = Vector2( 317.691, 99.0878 )
+scale = Vector2( 0.0607171, 0.0580781 )
 texture = ExtResource( 3 )
 
 [node name="spy_hit" type="CollisionShape2D" parent="."]
-position = Vector2( 576.743, 253.418 )
+position = Vector2( 571.983, 253.418 )
 shape = SubResource( 2 )
+

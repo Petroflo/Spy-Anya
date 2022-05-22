@@ -87,14 +87,15 @@ scale = Vector2( 2.38637, 2.46219 )
 texture = ExtResource( 2 )
 
 [node name="question_mark" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0, -40 )
 scale = Vector2( 0.0472173, 0.0403045 )
 texture = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 4 )
-hframes = 4
 vframes = 4
+hframes = 4
 frame = 12
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -106,3 +107,4 @@ anims/Walk_right = SubResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 9 )
 shape = SubResource( 5 )
+
