@@ -5,7 +5,8 @@ const menu = preload("res://scripte/PauseMenu.gd")
 var velocity : Vector2 = Vector2()
 var direction: Vector2 = Vector2()
 var speed = 600
-var pos
+var pos_y
+var pos_x
 
 func read_input():
 	velocity = Vector2()
@@ -30,8 +31,8 @@ func read_input():
 		velocity.x = 0
 		velocity.y = 0
 		$AnimationPlayer.stop() 
-	pos = position.y
-	print(pos)
+	pos_y = position.y
+	pos_x = position.x
 	move_and_slide(velocity, Vector2(0, 0), false, 4, 0.785, false)
 
 func _on_spy_area_entered(area):

@@ -1,18 +1,84 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripte/spy.gd" type="Script" id=1]
-[ext_resource path="res://sprites/kindpng_4468982.png" type="Texture" id=2]
+[ext_resource path="res://sprites/spy.png" type="Texture" id=2]
 [ext_resource path="res://sprites/kindpng_4005131.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 181.484
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 21.1857, 24.8901 )
+[sub_resource type="Animation" id=3]
+resource_name = "Move_Down"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11 ]
+}
 
-[node name="spy" type="Area2D" groups=[
-"groupe_spy",
-]]
+[sub_resource type="Animation" id=4]
+resource_name = "Move_Left"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Move_Right"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Move_Up"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 31.9709, 37.176 )
+
+[node name="spy" type="Area2D" groups=["groupe_spy"]]
 position = Vector2( 2.26093, 9.04395 )
 script = ExtResource( 1 )
 
@@ -21,10 +87,18 @@ position = Vector2( 562.991, 239.667 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 838.688, 481.848 )
-scale = Vector2( 0.773415, 0.699504 )
+position = Vector2( -1418.97, -362.21 )
+scale = Vector2( 1.29533, 1.10869 )
 texture = ExtResource( 2 )
-offset = Vector2( 48.0237, -3.19016 )
+offset = Vector2( 1552.97, 547.045 )
+hframes = 3
+vframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+anims/Move_Down = SubResource( 3 )
+anims/Move_Left = SubResource( 4 )
+anims/Move_Right = SubResource( 5 )
+anims/Move_Up = SubResource( 6 )
 
 [node name="sprite_question_mark" type="Sprite" parent="."]
 position = Vector2( 317.691, 99.0878 )
@@ -32,6 +106,5 @@ scale = Vector2( 0.0607171, 0.0580781 )
 texture = ExtResource( 3 )
 
 [node name="spy_hit" type="CollisionShape2D" parent="."]
-position = Vector2( 571.983, 253.418 )
+position = Vector2( 582.768, 241.132 )
 shape = SubResource( 2 )
-
